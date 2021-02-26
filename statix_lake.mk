@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-# Inherit some common Lineage stuff.
+# Inherit some common Statix stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/statix/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
@@ -24,8 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Device
 $(call inherit-product, device/motorola/lake/device.mk)
 
-# Inherit some common Pixel Experience stuff.
-TARGET_GAPPS_ARCH := arm64
+# Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # A/B updater
@@ -65,7 +64,7 @@ TARGET_RECOVERY_FSTAB := device/motorola/sdm660-common/rootdir/etc/fstab.qcom
 
 # Device identifiers
 PRODUCT_DEVICE := lake
-PRODUCT_NAME := aosp_lake
+PRODUCT_NAME := statix_lake
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto G7 Plus
 PRODUCT_MANUFACTURER := Motorola
